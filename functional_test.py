@@ -24,7 +24,7 @@ class NewVisitorTest(unittest.TestCase):
         time.sleep(1)
         table = self.browser.find_element_by_id('id_list_table')
         rows = table.find_elements_by_tag_name('tr')
-        self.assertTrue(any(row.text == '1: Купить павлиньи перья' for row in rows))
+        self.assertTrue(any(row.text == '1: Купить павлиньи перья' for row in rows), "Новый элемент списка не появился в таблице")
         # self.fail('тест окончен!')
 
 
